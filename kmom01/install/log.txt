@@ -1,0 +1,4 @@
+hostname: debian
+IP address localhost (hostname -i): 127.0.1.1
+IP address (hostname -I): 10.0.2.15
+uname -a: Linux debian 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5+deb10u2 (2019-08-08) x86_64 GNU/Linux

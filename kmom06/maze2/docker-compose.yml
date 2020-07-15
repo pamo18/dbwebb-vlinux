@@ -1,0 +1,20 @@
+version: "3"
+networks:
+    dbwebb:
+services:
+    server:
+        image: pamo18/vlinux-mazeserver:latest
+        container_name: "mazeserver"
+        ports:
+            - "8080:1337"
+        networks:
+            dbwebb:
+        restart:
+            "always"
+    client:
+        image: pamo18/vlinux-mazeclient:loop
+        container_name: "mazeclient"
+        networks:
+            dbwebb:
+        links:
+            - server:mazeserver

@@ -1,0 +1,31 @@
+version: "3"
+networks:
+    dbwebb:
+services:
+    server:
+        image: pamo18/vlinux-kmom10:server
+        container_name: "server"
+        ports:
+            - "1337:1337"
+        volumes:
+            - "./data/:/data/"
+        networks:
+            dbwebb:
+        restart:
+            "always"
+    webbclient:
+        image: pamo18/vlinux-kmom10:webbclient
+        container_name: "webbclient"
+        ports:
+            - "1338:80"
+        networks:
+            dbwebb:
+        links:
+            - server:server
+    client:
+        image: pamo18/vlinux-kmom10:client
+        container_name: "client"
+        networks:
+            dbwebb:
+        links:
+            - server:server

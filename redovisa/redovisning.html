@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>Vlinux Redovisning</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="site-header">
+        <div id="date-time"></div>
+        <img src="img/logo.jpg" alt="logo" class="logo"/>
+        <span class="site-title">Vlinux Me-Sida för Paul Moreland</span>
+        <span class="site-slogan">Who am i?</span>
+    </header>
+    <div class="wrap-main">
+        <aside>
+            <nav class="navbar_main">
+                <ul>
+                    <li><a href="me.html">Me</a></li>
+                    <li><a class="selected" href="redovisning.html">Redovisning</a></li>
+                    <li><a href="om.html">Om</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <article>
+                <h1>Redovisning</h1>
+
+                <p>Detta är redovisningssidan för kursen vlinux.</p>
+
+                <section>
+                <h2>Kmom01</h2>
+                <p>Detta är redovisningen för kursen Operativsystemet Linux och virtualiseringstekniker, a.k.a. vlinux, kmom01.  Linux är ett OS som används mycket i många olika områden, men som en server är den oslagbar eftersom den är kraftfull, stabil, säkert, effektivt och flexibelt.  Det finns många olika versioner av Linux, distros, och vi använder Debian under kursen.</p>
+
+                <p>Jag har använt Mac OS i många år nu så jag känner till den Unix miljö relativt väl, framförallt sedan jag har börjat webbprogrammering hos BTH.  De senaste två åren har jag också använt Linux, Ubuntu, som en server till mina hemautomations enheter.  Jag har också nyligen konfigurerat en Ubuntu webserver för det arbetet jag har gjort under programmet.  Hemma har jag en egen kraftfull Windows server som är alltid påslagen, där jag använder Hyper-v för att virtualisera mina Linux system, i nuläget två stycken igång samtidigt.  I min webserver använder jag både nginx och apache i en reverse proxy, då blir det säkrare eftersom jag undviker att öppna onödiga porter på mitt nätverk, samt använder certbot för att generera SSL certifikat.  Med detta sagt så har jag massor kvar att lära mig inom Linux men jag är inte heller rädd för nya utmaningar.</p>
+
+                <p>Unix-kommando börjar kännas naturligt nuförtiden, där det mesta jag har lärt mig är från programmet det senaste året.  Jag använder ssh för att kommunicera med mina Ubuntu servrar, där jag använder enbart serverversionen utan en GUI, då måste jag göra allting i terminalen och då lär man sig snabbare.  I början kändes det konstigt men nu är jag bekväm.</p>
+
+                <p>Jag körde standardinstallation med VirtualBox och Debian, det kändes bäst för kursen att inte göra något annorlunda än det som krävdes.</p>
+
+                <p>VirtualBox, som de flesta virtualiseringsprogram, är enkla att komma igång med men samtidigt kraftfulla om det behövs.  Utöver Hyper-v på Windows har jag också använt Parallels på Mac OS tidigare, då kände jag mig bekväm med VirtualBox samt installationen av Debian.  Det finns många fördelar att köra en virtuell OS inom ett OS, framförallt för att kunna köra olika OS på samma maskin helt isolerade, där man enkelt kan skapa snapshots innan man testa något nytt.  Jag ser fram emot att jobba med Docker containerization, som jag inte har mycket erfarenhet av men jag förstår konceptet, att paketera en lättviktmiljö med enbart det mest nödvändiga dependencies för uppdraget.</p>
+
+                <p>Ja, jag installerade Guest Additions för att kunna gör det möjligt att kopiera och klistra in emellan min Mac OS och den virtuella maskinen.  Men eftersom jag gärna vill ssh:a in i den virtuella maskin så kommer det inte användas så ofta.</p>
+
+                <p>Nej, inget krånglade och allting fungerar som det ska där hela kursmomentet gick smidigt och tog inte lång tid.</p>
+                </section>
+
+
+                <section>
+                <h2>Kmom02</h2>
+                <p>Inom detta kursmomentet har jag flyttat över min redovisa sida till Debian servern med hjälp av Virtual Hosts.  Utöver detta har jag skapat en ssh nyckel för autentisering mellan min klientdator och servern för enklare inloggning, lärt mig om tmux för terminalen samt grunderna i bash.</p>
+
+                <p>Genom att installera och konfigurerar min egen webbserver hemma har jag skaffat en del erfarenhet av Virtual Hosts, vilket underlättade uppgiften en hel del.  Men, jag lärde mig att skriva bättre konfigfiler med hjälp av variabler, ’Define’.  Då kan jag bara kopiera filen och ändra ett par detaljer för nya sidor, smidigt.  Att kunna hosta flera webbsidor på samma server är en klar fördel.</p>
+
+                <p>Terminalen är ett viktigt och kraftfullt verktyg för en webbprogrammerare, där man jobbar mycket med filer och mappar samt olika terminalverktyg.  Man kan jobba både snabbare och mer effektivt med bara några få kommandon jämfört med en GUI, där man kan behöva klicka genom många sidor och menyval för att göra enkla uppgifter.  Men självklart ska alla kommandon kommas ihåg, vilket blir en utmaning ibland.  Jag har börjat att loggar viktiga kommandon nu för att göra det lättare om jag glömmer av, framförallt saker man gör sällan.  Men använder man terminalen ofta så sitter det till slut i fingrarna.</p>
+
+                <p>Jag har skapat en ssh nyckel för att enklare logga in till servern, istället för att skriva lösenorden varenda gång.  Jag skapade en uppsättning ssh-nycklar på min lokala maskin och har kopierat över den publika delen till servern som sedan används för autentisering.  Detta har jag gjort förut och jag kände till processen.  Men jag har aldrig använt rsync över ssh, ett verktyg som är väldigt kraftfullt och smidigt.  Med detta kan jag logga in med ssh och skicka över filer och mappar med ett enda kommando.  Vill man ladda ned filer från servern istället så kan man göra detta på samma sätt, där man först skriver vad man vill kopiera följt av destinationen.</p>
+
+                <p>Verktyget tmux är nytt för mig, där jag ofta öppnar upp flera flikar i terminalen istället.  Men nu kan jag skapa sessions för att återställa den miljö jag vill jobba inom.  Man kan öppna och växla mellan flera fönster också, vilket ger en bättre överblick och lättåtkomlighet på den miljö man vill jobba inom.  Att skapa en Alias för att snabbare återkoppla en session är ett kraftfullt och smidigt sätt att jobba.  Tmux kommer jag att använda ofta nu framöver känner jag.</p>
+
+                <p>Jag har jobbat inom Unix länge nu, fast mest på Mac OS.  Terminalen kände jag till innan utbildningen men har aldrig jobbat med den så mycket som jag gör nu.  Under det senaste året har jag skaffat mig erfarenhet med Linux också, främst virtuellt.  Jag börjar känna mig bekväm inom Unix, där jag har skaffat en bra förståelse och respekt för terminalen samt utökat mina kunskaper på alla kommandon och tekniker som finns för att få saker gjort.  Med en OS baserad på Unix har man mer kontroll över hela systemet, jämfört med Windows, vilket, jag känner, leder till ökad effektivitet och produktivitet men framförallt frihet.</p>
+                </section>
+
+
+                <section>
+                <h2>Kmom03</h2>
+                <p>Vlinux kmom03 handlar om Docker och skriptprogrammering med Bash.  Bash, som står för Bourne-Again Shell, är ett CLI skapat av Brian Fox som används för att skicka vidare instruktioner till operativsystemet.  Hittills inom Mac OS och Linux har jag skrivit enkla Bash kommandon i terminalen men aldrig i ett script.</p>
+
+                <p>Med Bash kan man skapa ett skript med många olika kommandon som sedan exekveras vid start av filen.  När man kodar ett skript med Bash jobbar man med variabler, funktioner, for loopar och IF satser precis som de flesta programmeringsspråk, där Bash syntaxen liknar en blandning av PHP och Python.  Man kan också skicka med argument till scriptet för att specificera olika händelse eller uppdrag.</p>
+
+                <p>Skriptprogrammering med Bash är ett smidigt och effektivt sätt att exekvera en rad kommando på en och samma gång.  Eftersom man har tillgång till hela systemet så kan man automatisera specifika systemhändelse för att underlätta komplicerade uppdrag eller för att förenkla vanliga procedurer.  Men man måste tänka på säkerheten också eftersom med mycket kraft kommer stort ansvar, där ett par felaktiga kommando eller inskickade argument kan sabotera systemet helt.</p>
+
+                <p>Jag tyckte att detta kursmoment erbjöd mig nya kunskaper om Docker och Bash som jag verkligen uppskattar.  Alla uppdrag var roliga och lagom utmanande känner jag, framförallt skriptprogrammering med Bash.</p>
+
+                <p>Detta är först gången jag har jobbat med Docker men jag förstår direkt fördelarna.  Med Docker kan man installera en lättvikt och nedbantat operativsystem inom containrar, där man installerar bara de nödvändigaste program för att klara av specifika uppdrag.  Då blir dessa containrar mindre i storlek och mindre tungt att köra men samtidigt tillräckligt kraftfullt för ändamålet.  En annan fördel är möjligheten att kunna köra containrar på många olika operativsystem och helt isolerade från den lokala miljön samt andra containrar.  Med en virtuell maskin har man hela operativsystemet installerat istället, vilket blir mer tungt att lagra och köra men kanske är det bästa alternativet om man behöver ett mer komplett system, där de mesta man kan och kommer att använda är redan installerat från start.</p>
+                </section>
+
+
+
+                <section>
+                <h2>Kmom04</h2>
+                <p>Vlinux kmom04 handlar om att bygga en webbserver inom en Docker container som körs igång automatiskt vid uppstart.  Att skriva en dockerfile anpassad för en webbserver blir ett effektivt sätt att skapa den specifika miljö som krävs, där det mesta är konfigurerat och klart redan från början.</p>
+
+                <p>Jag valde att jobba med en Node container ihop med JavaScript ramverket Express.  Jag har erfarenhet av Node, Apache2, PHP och Python som webbservrar och alla fungerar väldigt bra beroende på strategin och strukturen man vill ha.  Men jag valde Node för att jag kör jsramverk kursen samtidigt och vill gärna använda de kunskaper och tekniker jag nyligen har lärt mig.  Python med Flask hade kunnat vara ett bra alternativt eftersom den är lätt att köra och snabb att komma igång med.</p>
+
+                <p>Docker känns som ett underbart verktyg att jobba med, smidigt och kraftfullt.  Med Docker blir det enkelt att dela med sig en container med alla nödvändiga filer och konfigurationer som krävs för att skapa olika miljöer.  Att skriva en dockerfil med alla kommandon som behövs är nyckeln till en välfungerande container.  Jag börjar känna mig bekväm med Docker men kommer behöva jobba mycket mer med den framöver, för att förstå ännu bättre hur saker i Docker fungerar och för att komma åt den enorma potential som finns tillgänglig.</p>
+
+                <p>Konceptet kring klient och server är baserade på flexibilitet och tillgänglighet.  En server kan hämta, förbereda och processa data från en databas eller göra andra komplexa och tidskrävande uppdrag innan den skickas vidare till klienten.  En server kan också kontrollera säkerhetsmässigt data innan den skickas vidare, en viktig process nuförtiden.  På klientsidan handlar det mesta om den visuella presentation och funktionalitet mot användaren.  Med en server konfigurerad och tillgänglig kan man komma åt motsvarande data på många olika klienter, webbaserade eller en CLI.  Här finns det flexibilitet, olika klientverktyg som har åtkomst till samma data och kan anpassas efter behov.  En server och klient kan jobba med saker som den är byggd för helt enkelt.</p>
+
+                <p>Jag har skrivit ett Bash skript för att skapa ett CLI som kommunicerar med min Express server.  Skripten presenterar data hämtade från de olika routes och det finns möjlighet att spara resultatet till en fil.  Ett testkommando finns också med för att testa om den default route localhost:1337, eller inskickade adress som argument, är aktivt eller inte.  Upplägget på mitt skript är likt sista kursmomentet, men anpassat för att känna av argumentera -s och --save för att spara data till en fil.  Jag tycker att denna filstruktur fungerar bra och är flexibel i sin användningsområden, men jag kommer säkert att testa andra varianter framöver.</p>
+
+                <p>När det gäller JSON filen i mappen data använder jag volymer och kör följande kommand inuti server mappen:</p>
+
+                <h4>docker run --rm -p 1337:1337 -v $(pwd)/data/:/data/  pamo18/vlinux-server:latest</h4>
+                </section>
+
+
+
+                <section>
+                <h2>Kmom05</h2>
+                <p>Vlinux kursmoment 5 handlar om att skapa ett Maze spel med hjälp av en klient BASH script och en server.  Till slut flyttas över klienten och servern till var sin Docker container och anslutas ihop med hjälp av ett Docker nätverk.</p>
+
+                <p>Min BASH skript blev något större än sista kursmomentet, men allting kändes hanterbart.  Man börjar lära sig en hel del BASH kommandon nu samt andra förbättringar när det gäller hur man kan strukturera sin kod.  Denna kmom har varit mer tidskrävande men allting har ändå varit lagom utmanande samt väldigt roligt.</p>
+
+                <p>Jag kollade lite gran på källkoden till servern och allting kändes logiskt, inget utöver det vanliga med en router som jobbar emot spellogiken och ett par JSON filer.  Jag känner mig relativt bekväm inom JavaScript och JSON filer så det enda utmaningen har varit BASH kodningen.  Jag har jobbat en hel del in JavaScript ramverket Express så det kändes intressant att se likande funktionalitet fast med ren JavaScript istället.</p>
+
+                <p>Jag försökte att bygga min Mazerunner så stabilt som möjligt för mina kunskaper och fokuserade mest på funktionalitet samt att leverera relativt lättlästa speltext och svar.  Jag delade upp koden till mindre funktioner som integrerar med varandra för att skapa en hyfsat DRY kodbas.  Tex. skapade jag en funktion som sparar viktiga speldetaljer till en fil och en funktion som återställer nuvarande spelstatus för varje steg.</p>
+
+                <p>Att koppla ihop både klient och server containrar i ett Docker nätverk ihop med en BASH script som styr allting kändes väldigt roligt och effektivt.  Så kommer jag jobba nu framöver.</p>
+
+                <p>Kmom05 Bash scripten körs med start och stop som argument.</p>
+                </section>
+
+
+
+                <section>
+                <h2>Kmom06</h2>
+                <p>Inom vlinux kmom06 ligger fokus på Docker Compose, ett verktyg som förenklar processen när flera containrar ska köras, samt reguljära uttryck med hjälp av en stream editor, sed.</p>
+
+                <p>I kursmoment kmom05 skapade jag ett Bash script som används för att köra igång två olika containrar ihop med en nätverk konfiguration, funktionalitet som Docker Composer är byggt för.  Med Docker Compose kan man samla konfigurationer till flera docker containrar i samma fil, där man kan ställa in containerns namn, port, nätverk, volym samt mycket mer.  Denna Composer fil används nu för att köra igång allting konfigurerat och klart, enkelt och smidigt.  Likt de flesta mjukvaror man kör idag hanteras allting som ett enda paket, där Composer knyter ihop en server, klient och nätverk så att allting fungerar korrekt från början.  Möjligheten att bara ladda hem ett projekt och köra ’docker-compose up’ för att starta en hel miljö, oavsett vart man befinner sig, är en klar fördel.  Att konfigurera volymer med Composer kan förenkla utvecklingsprocessen lokalt, där man vill göra snabba filändringar utan att bygga om containern, men betyder också att portabilitet minskar eftersom containern är beroende av externa filer.</p>
+
+                <p>Jag känner mig bekväm med begreppen kring klient och server.  En server kan hämta, förbereda och processa data från en databas eller göra andra komplexa och tidskrävande uppdrag innan den skickas vidare till klienten.  En server kan också kontrollera säkerhetsmässigt data innan den skickas vidare.  På klientsidan handlar det mesta om den visuella presentation och funktionalitet mot användaren.  Med en server konfigurerad och tillgänglig kan man komma åt motsvarande data på många olika klienter, webbaserade eller en CLI.</p>
+
+                <p>Jag känner mig också bekväm nu med Docker överlag och kommer använda den en hel del framöver, även utanför kursens ramar.  Möjligheten att skapa en färdig konfigurerad miljö, där man har kontroll över hela systemet och andra nödvändiga verktyg, är ett kraftfullt verktyg att ha.</p>
+
+                <p>Jag känner att min Mazerunner struktur från förra kursmomentet förenklade processen att skapa en spelloop, där jag skapade en särskild funktion som kallar de olika spelfunktioner i rätt ordning och en while loop som ta emot användarens olika val.</p>
+
+                <p>Med reguljära uttryck, regex, kan man söka i en fil för att matcha ett textmönster.  Jag kände till verktygen genom andra utvecklare men har aldrig använt den själv förut.  Labben erbjöd mig en bra möjlighet att testa verktygen för att förstår hur den fungerar och vad man kan göra med den.  När man förstår vad alla specialtecken betyder är det enklare att bryta ned alla kommandon och då blir det lättare att jobba med.  Verktyget känns kraftfullt och användbar så här långt, men jag måste jobba med den mer för att bemästra den.</p>
+                </section>
+
+
+
+                <section>
+                <h2>Kmom07-10</h2>
+
+                <h3>Projektredovisning, kmom10 vlinux</h3>
+
+                <h4>Krav 1 Regex för att konvertera loggfil till JSON</h4>
+
+                <p>Jag har skapat en Bashskript, log2json.bash, som använder verktygen sed för att filtrera ut viktiga detaljer från en log fil.  För att plocka ut alla ip addresser, url, datum och tider måste filen filtreras med hjälp av en Regex.  Man specificerar strukturen och innehållet på det man söker efter, t.ex. att en IP adress innehåller från ett till 3 siffror där värdet är mellan 0 och 9 över 4 sektioner med en punkt emellan.  Resultaten av filtreringen sparas sedan i JSON filen ”log.json”, som finns i mappen ”data/”, med hjälp av verktyget jq för en snyggare struktur.  I mitt Bash skript finns det också en funktion för att räkna hur många träffar som finns i JSON filen.  Innehållet till min JSON fil validera korrekt med hjälp av online verktyget jsonlint.</p>
+
+                <h4>Krav 2 Server för att servera loggen</h4>
+
+                <p>Jag har skapat en Express server för att hämta data från min JSON logg fil.  En Dockerfile finns med för att bygga servern i en Node Docker container, konfigurerat och klart med alla nödvändiga verktyg installerat från början.  Servern är driftsatt på port 1337 och jobbar mot olika routes för att hämta specifika data från filen, t.ex. route ”/data?url=feedly” visar alla rader med ”feedly” som URL.  Man kan också söka på delsträngar när det gäller både IP address och URL, t.ex. ”/data?url=feed”.  Det finns en Docker Compose fil konfigurerat för att köra servern med ett nätverk kallad ”dbwebb” där servicen heter ”server”.  Mappen ”data/” som innehåller logg filen är lagt till som en volym.  Jag valde Express som server för att jag har mest erfarenhet av den och känner mig bekväm med den funktionalitet och flexibilitet som Express erbjuder.</p>
+
+                <h4>Krav 3 Bashscript för att testa servern</h4>
+
+                <p>För att presentera data från servern har jag skapat en Bashskript som Klient.  En Dockerfil finns med för att bygga klienten i en ”debian:stretch-slim” Docker container.  Min Bashskript använder ”curl” för att hämta ut data från servern och ”jq” för att presentera resultatet snyggare.  Det finns en meny, som visas när containern startas, som beskriver de tillgängliga kommandon i skriptet.  Med hjälp av ”-c, --count” kan man välja att skriva ut antal rader från resultatet, annars skrivs alla JSON objekt ut.  Det finns funktionalitet för att ändra server namnet samt visa det nuvarande servernamn, vilket är sparad i en text fil.  I Docker Compose filen heter denna service ”client” och är kopplad till nätverket ”dbwebb”.  När containern startas så hamnar man i Bash för att enkelt starta skriptet.</p>
+
+                <h4>Krav 4: Webbklient</h4>
+
+                <p>Som alternativt till min Bash klient har jag skapat en webbklient, som jobbar mot servern på ett liknande sätt som Bash klienten fast inom en webbsida.  Jag har byggt min webbklient i JavaScript ramverket React, som jag tycker är en kraftfull, flexibel samt effektiv struktur att jobba inom.  På förstasidan visas det en en kort beskrivning av vad webbklienten kan göra ihop med en navigationsmeny till de olika valen.  Jag presenterar resultaten i tabellform för lättare läsning, paginering med 1000 träffar per sida samt en resultats överblick med antal träffade rader.  När man skriver i input fälten så visas resultatet direkt med varje knapptryck.  Det finns en Dockerfile som bygger en ”debian:stretch-slim” container med alla nödvändiga filer och verktyg samt en apache konfigurationsfil.  I Docker Compose heter denna service ”webbclient” och är driftsatt på port 1338 samt kopplat till nätverket ”dbwebb”.  Filer till min React webbklient är skapade genom ”npm run build” och är då statiska webbbfiler som är sidan kopierat över till Docker containern under byggprocessen.</p>
+
+                <p><strong>OBS!</strong></p>
+
+                <p>I min React webbklient används JavaScript compiler <a href="https://en.wikipedia.org/wiki/Babel_(compiler)">Babel</a> med eslint för valideringen för att vara bättre kompatibel med kod syntaxen i React.  Kör man ”npm run eslint” från webbklient mappen så klarar min webbklient kodvalideringen utan några fel.  När jag publicera webbklienten till dbwebb så visas varningen (Cannot find module 'babel-eslint') flera gånger.  Jag har använt ”dbwebb publishpure” för att garantera alla filer från webbklienten är med på studentservern.  Jag har pratat med Kenneth Lewenhagen om detta och förklarar därför situationen här.</p>
+
+                <h4>Krav 5: Mer data</h4>
+
+                <p>Jag skapade min log2json Bashskript men möjligheten redan från början att filtrera ut dagar, månader, tider, dager och tider samt månader, dager och tider.  Min server stöder denna utökade filtrering och klienterna presenterar resultaten som tänkt.  För att söka på en delsträng av tiden, t.ex. ”/data?time=14” så visas alla rader mellan 14:00 och 14:59.  Söker man med t.ex. ”/data?time=14:36” så visas enbart exakt matchande rader.  Jag använder en Regex för denna funktionalitet i Express servern baserade på användarens request.</p>
+
+                <h4>Om projektet</h4>
+
+                <p>Inom detta projekt har jag utfört alla 5 kraven.  Projektet har varit både roligt och lärorikt, där jag har byggt på mina Bash och Docker kunskaper.  Att driftsätta min React webbklient var mest lärorikt eftersom en Docker container behöver konfigureras korrekt med Apache, framförallt med ”Rewrite” regler för att alla routes ska fungerar rätt.  Jag tycker att projektet ha gått bra och kraven gick relativt snabbt att utföra.  Jag tycker också att projektet var en rimlig avslutning för kursen samt lagom utmanande.</p>
+
+                <h4>Om kursen</h4>
+
+                <p>Vlinux har varit en väldigt rolig och intressant kurs, förmodligen en av de roligaste i hela programmet.  Jag har nu skaffat mig viktiga kunskaper och verktyg som kan användas i många situationer inom webbprogrammering och även privat.  Jag förstår bättre Bash och kan skriva mina egna bashskripter, webbplatsdriftsättning samt Docker, ett kraftfullt verktyg som jag kommer utnyttja mycket framöver.  Jag tycker att feedback från läraren har varit bra med snabba svar och kursmaterialen har varit tillräckligt och lättåtkomligt.  De enda jag kan komma på som förbättring är kanske lite mer att göra i början av kursen, som frivilliga uppgifter kanske.  Jag är väldigt nöjd efter denna kurs och skulle lätt rekommendera den till mina vänner och kollegor.</p>
+                
+                <p>På en skala av 1–10 ger jag kursen 9.</p>
+                </section>
+            </article>
+        </main>
+    </div>
+    <footer id="site-footer">
+        <div class="me-tag">
+            <img src="img/Paul-Moreland.jpg" alt="Paul Moreland" style="height:100px"/>
+            <p>Paul Moreland är student hos Blekinge Tekniska Högskola och studerar Webbprogrammering</p>
+        </div>
+
+        <p>Validatorer: <a href="http://validator.w3.org/check/referer">HTML5</a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a><br>
+        Specifikationer: <a href="https://www.w3.org/TR/html/">HTML5</a>
+        <a href="https://www.w3.org/TR/CSS/">CSS3</a>
+        <a href="https://www.w3.org/2009/cheatsheet/">Cheatsheet</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

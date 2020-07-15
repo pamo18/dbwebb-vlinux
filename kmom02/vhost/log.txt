@@ -1,0 +1,2 @@
+Rsync files over ssh: rsync -av -e "ssh -p 2222" redovisa/ pamo@localhost:vhosts/me.linux.se/htdocs/
+Show webpage in Lynx terminal browser: lynx http://me.linux.se/me.html

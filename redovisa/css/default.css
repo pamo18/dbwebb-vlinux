@@ -1,0 +1,415 @@
+html {
+    background-color: black;
+    overflow-y: scroll;
+}
+
+.the-date {
+    font-weight: bold;
+}
+
+.errorMessage {
+    display: block;
+    overflow: auto;
+    background-color: red;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 25em;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+}
+
+.successMessage {
+    overflow: auto;
+    background-image: linear-gradient(grey, black, grey);
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 25em;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+}
+
+.off {
+    display: none;
+}
+
+.login_box {
+    text-align: center;
+}
+
+.login_box label {
+    display: block;
+}
+
+.site-header {
+    position: relative;
+    background-color: #90866e;
+    overflow: auto; /* clear fix to make div span all elements */
+    font-family: Helvetica;
+}
+
+.site-header img {
+    float: left;
+}
+
+.site-title {
+    display: block;
+    padding-top: 1em;
+    padding-left: 50px;
+    font-size: 2.5em;
+    overflow: auto;
+}
+
+.theme {
+    position: absolute;
+    float: right;
+    margin-right: 1em;
+    bottom: 1em;
+    right: 50px;
+}
+
+.theme select {
+    font-size: 1em;
+}
+
+.site-slogan {
+    display: block;
+    padding-left: 50px;
+    font-style: italic;
+    overflow: auto;
+}
+
+.logo {
+    width: 120px;
+    padding: 1em;
+    border-radius: 40px;
+}
+
+#date-time {
+    float: right;
+    padding-right: 1em;
+}
+
+.navbar_main {
+    border-top: 1px solid black;
+}
+
+.navbar_main .selected {
+    color: white;
+    background-color: #282828;
+}
+
+.navbar_under .selected {
+    color: white;
+    background-color: #282828;
+}
+
+.navbar_main ul {
+    padding: 0;
+    text-align: center;
+}
+
+.navbar_main li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar_main a {
+    display: inline-block;
+    font-size: 18px;
+    width: 90px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    background-color: #eee;
+    color: black;
+}
+
+.navbar_main a:not(.selected):hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.navbar_under ul {
+    padding: 0;
+    text-align: center;
+}
+
+.navbar_under li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar_under a {
+    display: block;
+    font-size: 0.9em;
+    width: 8em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    background-color: #eee;
+    color: black;
+}
+
+.navbar_under a:not(.selected):hover {
+    background-color: #ccc;
+    color: black;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 980px;
+    background-color: #ebe5d5;
+    border-radius: 10px;
+}
+
+main {
+    min-height: 50em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.main_undernav {
+    min-height: 49.4em;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+article {
+    overflow: auto;
+    font-family: Helvetica;
+    font-size: 1.1em;
+}
+
+.me {
+    width: 40%;
+    margin-top: 2em;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+    float: right;
+}
+
+.Manchester {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.backdrop {
+    text-align: right;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.om-links {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.om-links a {
+    color: black;
+}
+
+.om-links a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+#mysql-image {
+    text-align: center;
+}
+
+.linux {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.linux img {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#site-footer .me-tag a {
+    color: black;
+    text-decoration: underline;
+}
+
+#site-footer .me-tag a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+#site-footer {
+    font-size: 1.1em;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Helvetica;
+}
+
+#site-footer a {
+    text-decoration: underline;
+    padding-right: 2px;
+    color: black;
+}
+
+#site-footer a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.me-tag {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    height: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.me-tag img {
+    float: left;
+}
+
+.me-tag p {
+    margin-top: 1px;
+    padding-left: 0.5em;
+    float: left;
+    max-width: 150px;
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.stats {
+    font-size: 0.8em;
+}
+
+.counter {
+    background-image: linear-gradient(grey, black, grey);
+    margin: 0 auto;
+    text-align: center;
+    width: 25em;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+}
+
+.counter p {
+    color: white;
+    font-size: 7em;
+}
+
+.reload {
+    margin: 0 auto;
+    text-align: center;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=destroy] {
+    font-size: 16px;
+}
+
+@media (max-width: 980px) {
+    body {
+        width: auto;
+    }
+}
+
+@media (max-width: 880px) {
+    .site-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 770px) {
+    .site-title {
+        padding-left: 10px;
+        font-size: 1.5em;
+    }
+
+    .site-slogan {
+        padding-left: 10px;
+    }
+
+    .theme {
+        right: 8px;
+    }
+
+    .theme select {
+        font-size: 1em;
+    }
+
+    .title {
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    .the-date {
+        display: none;
+    }
+
+    .site-title {
+        padding-top: 1em;
+        font-size: 1.3em;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .navbar_main li {
+        display: block;
+    }
+
+    .navbar_main a {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        width: 50%;
+        font-size: 1.5em;
+        padding: 2px;
+    }
+
+    .navbar_under a {
+        font-size: 0.85em;
+        padding: 0;
+    }
+
+    .navbar_under a {
+        width: 6em;
+    }
+
+    input[type=submit],
+    input[type=reset],
+    input[type=destroy] {
+        font-size: 0.8em;
+    }
+
+    .theme {
+        display: none;
+    }
+}
